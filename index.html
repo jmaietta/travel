@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellissima Italia - October 2025 Journey</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('amalfi-coast.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-600">🇮🇹 Bellissima Italia</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#itinerary" class="text-gray-600 hover:text-teal-500">Itinerary</a>
+                <a href="#food" class="text-gray-600 hover:text-teal-500">Cuisine</a>
+                <a href="#tips" class="text-gray-600 hover:text-teal-500">Travel Tips</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#itinerary" class="block py-2 text-gray-600 hover:text-teal-500">Itinerary</a>
+            <a href="#food" class="block py-2 text-gray-600 hover:text-teal-500">Cuisine</a>
+            <a href="#tips" class="block py-2 text-gray-600 hover:text-teal-500">Travel Tips</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Bellissima Italia</h1>
+            <p class="text-lg md:text-2xl mb-2">October 2025 Journey</p>
+            <p class="max-w-3xl mx-auto">An 8-day exploration of Rome, Sorrento, and the stunning Amalfi Coast.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Itinerary Section -->
+        <section id="itinerary" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">Your Journey Itinerary</h2>
+            
+            <!-- Rome Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Part 1: La Città Eterna - Rome (Oct 4-8)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Day 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="spanish-steps.jpg" alt="The Spanish Steps in Rome" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Rome';">
+                        <h4 class="font-bold text-lg mb-2">Day 1: Arrival & Food Tour</h4>
+                        <p class="text-gray-600 text-sm">Arrive in Rome, check into Hotel Baglioni Regina, and enjoy an evening food tour in the charming Trastevere neighborhood.</p>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                         <img src="colosseum.jpg" alt="The Colosseum in Rome" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Ancient+Rome';">
+                        <h4 class="font-bold text-lg mb-2">Day 2: Ancient Rome</h4>
+                        <p class="text-gray-600 text-sm">A guided tour of the Colosseum and Ancient City, exploring the heart of the Roman Empire.</p>
+                    </div>
+                    <!-- Day 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="gnocchi-alla-sorrentina.jpg" alt="Italian cooking class" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Cooking';">
+                        <h4 class="font-bold text-lg mb-2">Day 3: Cooking Class</h4>
+                        <p class="text-gray-600 text-sm">A hands-on Pasta & Tiramisu cooking class to learn the secrets of authentic Italian cuisine.</p>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="vatican.jpg" alt="The Sistine Chapel ceiling in the Vatican" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Vatican';">
+                        <h4 class="font-bold text-lg mb-2">Day 4: Vatican Treasures</h4>
+                        <p class="text-gray-600 text-sm">Discover the vast art collections of the Vatican Museums. Remember to dress modestly!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sorrento & Amalfi Coast Section -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Part 2: La Costa Divina - Sorrento & Amalfi Coast (Oct 8-11)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Day 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="pompeii.jpg" alt="Ruins of Pompeii" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Pompeii';">
+                        <h4 class="font-bold text-lg mb-2">Day 5: Travel & Pompeii</h4>
+                        <p class="text-gray-600 text-sm">Travel to Sorrento with a fascinating guided tour of Pompeii, the city frozen in time by Mount Vesuvius.</p>
+                    </div>
+                    <!-- Day 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="amalfi-coast.jpg" alt="View of the Amalfi Coast" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Amalfi';">
+                        <h4 class="font-bold text-lg mb-2">Day 6: Amalfi Coast Tour</h4>
+                        <p class="text-gray-600 text-sm">Explore the breathtaking scenery and picturesque towns of the world-famous Amalfi Coast.</p>
+                    </div>
+                    <!-- Day 7 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <img src="capri.jpg" alt="The island of Capri" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Capri';">
+                        <h4 class="font-bold text-lg mb-2">Day 7: Capri & Anacapri</h4>
+                        <p class="text-gray-600 text-sm">Take a memorable tour of the enchanting and glamorous island of Capri and its quieter counterpart, Anacapri.</p>
+                    </div>
+                    <!-- Day 8 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                         <img src="https://images.unsplash.com/photo-1542838334-476906059359?q=80&w=2070&auto=format&fit=crop" alt="Airplane window view" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Departure';">
+                        <h4 class="font-bold text-lg mb-2">Day 8: Departure</h4>
+                        <p class="text-gray-600 text-sm">Transfer to Naples Airport for your return flight, filled with unforgettable memories. Arrivederci!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Section -->
+        <section id="food" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">A Taste of Italy</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="neapolitan-pizza.jpg" alt="Neapolitan Pizza" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Pizza';">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Neapolitan Pizza</h4>
+                        <p class="text-gray-600 text-sm">Enjoy authentic pizza in its birthplace, Naples.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="gnocchi-alla-sorrentina.jpg" alt="Gnocchi alla Sorrentina" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Gnocchi';">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Gnocchi alla Sorrentina</h4>
+                        <p class="text-gray-600 text-sm">Soft potato dumplings baked with tomato sauce and fresh mozzarella.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="fresh-seafood.jpg" alt="Fresh Seafood" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Seafood';">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Fresh Seafood</h4>
+                        <p class="text-gray-600 text-sm">Indulge in coastal dishes featuring the fresh catch of the day.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="limoncello.jpg" alt="Limoncello" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Limoncello';">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Limoncello</h4>
+                        <p class="text-gray-600 text-sm">Sip the region's famous sweet lemon liqueur, a perfect digestif.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section id="tips" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">Essential Travel Tips</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Currency & Tipping -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">💰 Currency & Tipping</h3>
+                    
+                    <!-- Exchange Rate Widget -->
+                    <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-3 text-center">Currency Converter</h4>
+                        <div class="flex items-center justify-center space-x-4 mb-2">
+                            <div class="flex-1">
+                                <label for="usd-input" class="block text-sm font-medium text-gray-700">USD ($)</label>
+                                <input type="number" id="usd-input" value="1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm p-2">
+                            </div>
+                            <div class="text-2xl pt-6">⇄</div>
+                            <div class="flex-1">
+                                <label for="eur-input" class="block text-sm font-medium text-gray-700">EUR (€)</label>
+                                <input type="number" id="eur-input" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 sm:text-sm p-2">
+                            </div>
+                        </div>
+                        <p id="rate-info" class="text-xs text-gray-500 text-center">Fetching live rate...</p>
+                    </div>
+
+                    <h4 class="font-semibold mb-2">Tipping Heuristics</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li><b>Restaurants:</b> Not required, but rounding up or leaving a few euros for great service is appreciated. A 5-10% tip is very generous. Check for a *servizio incluso* (service charge) on the bill.</li>
+                        <li><b>Taxis:</b> Not expected, but rounding up to the nearest euro is a kind gesture.</li>
+                        <li><b>Hotel Staff:</b> €1-€2 per bag for porters, €1 per day for housekeeping.</li>
+                        <li><b>Tour Guides:</b> For a great experience, €5-€10 per person for a full-day tour is a good guideline.</li>
+                    </ul>
+                </div>
+                
+                <!-- General Advice -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">📋 General Advice</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li><b>Comfortable Shoes:</b> Essential! You'll walk a lot on uneven cobblestone streets.</li>
+                        <li><b>Safety:</b> Be aware of your surroundings and watch out for pickpockets in crowded tourist areas.</li>
+                        <li><b>Electronics:</b> Italy uses the Type F (2-prong) plug at 230V. Bring a universal adapter.</li>
+                        <li><b>Pace of Life:</b> Embrace a more relaxed pace. Meals are meant to be savored.</li>
+                        <li><b>Language Basics:</b> Locals appreciate it when you try a few Italian phrases like *Buongiorno* (Good day), *Per favore* (Please), and *Grazie* (Thank you).</li>
+                        <li><b>Modest Dress:</b> Have a scarf or jacket handy to cover shoulders and knees when entering churches.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Italy Travel Guide. All information is for planning purposes only.</p>
+            <p class="text-sm text-gray-400 mt-2">Buon Viaggio!</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Exchange Rate Widget ---
+        const usdInput = document.getElementById('usd-input');
+        const eurInput = document.getElementById('eur-input');
+        const rateInfo = document.getElementById('rate-info');
+        
+        // Use a free, no-API-key-required service for exchange rates
+        const apiUrl = 'https://api.exchangerate-api.com/v4/latest/USD';
+        let rateEUR;
+
+        async function fetchRate() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                rateEUR = data.rates.EUR;
+                
+                // Update UI with the fetched rate
+                updateConverter();
+                rateInfo.textContent = `Live Rate: 1 USD = ${rateEUR.toFixed(4)} EUR`;
+
+            } catch (error) {
+                console.error('Failed to fetch exchange rate:', error);
+                rateInfo.textContent = 'Could not fetch live rate.';
+                // Use a fallback rate if API fails
+                rateEUR = 0.93; 
+                updateConverter();
+            }
+        }
+
+        function updateConverter(source = 'usd') {
+            if (!rateEUR) return; // Don't calculate if rate isn't fetched yet
+
+            const usdValue = parseFloat(usdInput.value);
+            const eurValue = parseFloat(eurInput.value);
+
+            if (source === 'usd' && !isNaN(usdValue)) {
+                eurInput.value = (usdValue * rateEUR).toFixed(2);
+            } else if (source === 'eur' && !isNaN(eurValue)) {
+                usdInput.value = (eurValue / rateEUR).toFixed(2);
+            }
+        }
+
+        // Event Listeners for the converter inputs
+        usdInput.addEventListener('input', () => updateConverter('usd'));
+        eurInput.addEventListener('input', () => updateConverter('eur'));
+        
+        // Initial fetch of the exchange rate when the page loads
+        document.addEventListener('DOMContentLoaded', fetchRate);
+
+    </script>
+</body>
+</html>
