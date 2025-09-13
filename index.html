@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bellissima Italia - October 2025 Journey</title>
 
+    <!-- SEO and Social Sharing Meta Tags -->
     <meta name="description" content="An 8-day exploration of Rome, Sorrento, and the stunning Amalfi Coast.">
     <meta property="og:title" content="Bellissima Italia - October 2025 Journey" />
     <meta property="og:description" content="An 8-day exploration of Rome, Sorrento, and the stunning Amalfi Coast." />
@@ -15,6 +16,7 @@
     <meta name="twitter:description" content="An 8-day exploration of Rome, Sorrento, and the stunning Amalfi Coast.">
     <meta name="twitter:image" content="amalfi-coast.jpg">
 
+    <!-- Favicon and Manifest Files -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -22,14 +24,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
+    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Leaflet CSS for Interactive Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -57,6 +63,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center space-x-3">
@@ -69,12 +76,14 @@
                 <a href="#food" class="text-gray-600 hover:text-teal-500">Cuisine</a>
                 <a href="#tips" class="text-gray-600 hover:text-teal-500">Travel Tips</a>
             </div>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
             <a href="#overview" class="block py-2 text-gray-600 hover:text-teal-500">Overview</a>
             <a href="#itinerary" class="block py-2 text-gray-600 hover:text-teal-500">Itinerary</a>
@@ -83,6 +92,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero-bg text-white py-20 md:py-32">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Bellissima Italia</h1>
@@ -91,15 +101,19 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
 
+        <!-- Trip Overview Section -->
         <section id="overview" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">Journey Overview</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Interactive Map -->
                 <div>
                     <h3 class="text-2xl font-semibold mb-4">Journey Map</h3>
                     <div id="map"></div>
                 </div>
+                <!-- 8-Day Itinerary Summary -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-2xl font-semibold mb-4">8-Day Itinerary at a Glance</h3>
                     <div class="space-y-4">
@@ -133,34 +147,41 @@
             </div>
         </section>
 
+        <!-- Itinerary Section -->
         <section id="itinerary" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">Your Detailed Itinerary</h2>
             
+            <!-- Rome Section -->
             <div class="mb-12">
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
                     <h3 class="text-2xl font-semibold">Part 1: La Città Eterna - Rome (Oct 4-8)</h3>
                     <div class="text-sm mt-2 md:mt-0"><b>Weather:</b> Avg. 55-70°F (13-21°C). Pack layers!</div>
                 </div>
+                <!-- Historical Context for Rome -->
                 <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-4 rounded-r-lg mb-8">
                     <h4 class="font-bold">Historical Context</h4>
                     <p class="text-sm">Rome's history spans over 2,500 years as the center of the Roman Empire. The sites you'll visit, like the Colosseum, date back to its height (approx. 1st century BCE to 4th century CE). Trastevere, a historic working-class district, has maintained much of its charming medieval character.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Day 1 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="spanish-steps.jpg" alt="The Spanish Steps in Rome" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Rome';">
                         <h4 class="font-bold text-lg mb-2">Day 1: Arrival & Food Tour</h4>
                         <p class="text-gray-600 text-sm">Arrive in <a href="https://share.google/4cEONabAbVU8RnaLt" class="text-teal-600 hover:underline">Rome</a>, check into <a href="https://www.baglionihotels.com/" class="text-teal-600 hover:underline">Hotel Baglioni Regina</a>, and enjoy an evening food tour in <a href="https://share.google/ubVqlPgIHistz94Dv" class="text-teal-600 hover:underline">Trastevere</a>. Highlights include sampling authentic street food and a multi-course meal with wine.</p>
                     </div>
+                    <!-- Day 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                          <img src="colosseum.jpg" alt="The Colosseum in Rome" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Ancient+Rome';">
                         <h4 class="font-bold text-lg mb-2">Day 2: Ancient Rome</h4>
                         <p class="text-gray-600 text-sm">A guided tour of the <a href="https://share.google/wVu36cweXW0wCbYeS" class="text-teal-600 hover:underline">Colosseum</a> and <a href="https://share.google/r7h8LXAUUyjRUyzyG" class="text-teal-600 hover:underline">Ancient City</a>, exploring the heart of the <a href="https://www.britannica.com/place/Roman-Empire" class="text-teal-600 hover:underline">Roman Empire</a>.</p>
                     </div>
+                    <!-- Day 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="gnocchi-alla-sorrentina.jpg" alt="Italian cooking class" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Cooking';">
                         <h4 class="font-bold text-lg mb-2">Day 3: Cooking Class</h4>
                         <p class="text-gray-600 text-sm">A hands-on Pasta & Tiramisu cooking class to learn the secrets of authentic Italian cuisine.</p>
                     </div>
+                    <!-- Day 4 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="vatican.jpg" alt="The Sistine Chapel ceiling in the Vatican" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Vatican';">
                         <h4 class="font-bold text-lg mb-2">Day 4: Vatican Treasures</h4>
@@ -169,31 +190,37 @@
                 </div>
             </div>
 
+            <!-- Sorrento & Amalfi Coast Section -->
             <div>
                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
                     <h3 class="text-2xl font-semibold">Part 2: La Costa Divina - Sorrento (Oct 8-11)</h3>
                     <div class="text-sm mt-2 md:mt-0"><b>Weather:</b> Avg. 59-73°F (15-23°C). Sea may be warm!</div>
                 </div>
-                 <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-4 rounded-r-lg mb-8">
+                 <!-- Historical Context for Sorrento -->
+                <div class="bg-teal-50 border-l-4 border-teal-500 text-teal-800 p-4 rounded-r-lg mb-8">
                     <h4 class="font-bold">Historical Context</h4>
                     <p class="text-sm">Sorrento has been a popular resort since Roman emperors built villas here. The Amalfi Coast was a powerful maritime republic in the medieval period. Pompeii offers an unparalleled glimpse into daily Roman life, preserved under volcanic ash from the eruption of Mount Vesuvius in 79 CE.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Day 5 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="pompeii.jpg" alt="Ruins of Pompeii" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Pompeii';">
                         <h4 class="font-bold text-lg mb-2">Day 5: Travel & Pompeii</h4>
                         <p class="text-gray-600 text-sm">Travel to <a href="https://share.google/AP23I2Dev11mkDXtm" class="text-teal-600 hover:underline">Sorrento</a> via high-speed train, stopping for a guided tour of <a href="https://artsandculture.google.com/streetview/pompeii/DQHczKZUoHnwiQ?sv_lng=14.484170635879169&sv_lat=40.75068545416621&sv_h=353.2231056888149&sv_p=-10.165729226673392&sv_pid=Wd1TNLs3B0y1eYw3fqsPQQ&sv_z=0.11351545052582313" class="text-teal-600 hover:underline">Pompeii's</a> remarkably preserved ruins.</p>
                     </div>
+                    <!-- Day 6 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="amalfi-coast.jpg" alt="View of the Amalfi Coast" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Amalfi';">
                         <h4 class="font-bold text-lg mb-2">Day 6: Amalfi Coast Tour</h4>
                         <p class="text-gray-600 text-sm">Explore the breathtaking scenery and picturesque towns of the world-famous <a href="https://share.google/Ko4YgMWQCmVseocaS" class="text-teal-600 hover:underline">Amalfi Coast</a>.</p>
                     </div>
+                    <!-- Day 7 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                         <img src="capri.jpg" alt="The island of Capri" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Capri';">
                         <h4 class="font-bold text-lg mb-2">Day 7: Capri & Anacapri</h4>
                         <p class="text-gray-600 text-sm">Take a memorable tour of the enchanting and glamorous island of <a href="https://share.google/fQxP3MSDgk9zlQm35" class="text-teal-600 hover:underline">Capri</a> and its quieter counterpart, <a href="https://share.google/mIVwEGoyXYhHzr7cy" class="text-teal-600 hover:underline">Anacapri</a>.</p>
                     </div>
+                    <!-- Day 8 -->
                     <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
                          <img src="Naples.jpg" alt="Naples International Airport" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Departure';">
                         <h4 class="font-bold text-lg mb-2">Day 8: Departure</h4>
@@ -203,6 +230,7 @@
             </div>
         </section>
 
+        <!-- Food Section -->
         <section id="food" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">A Taste of Italy</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -237,9 +265,11 @@
             </div>
         </section>
 
+        <!-- Travel Tips Section -->
         <section id="tips" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-10 text-teal-700">Essential Travel Tips</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Currency & Tipping -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-4">💰 Currency & Tipping</h3>
                     <div class="bg-gray-100 p-4 rounded-lg mb-6">
@@ -266,6 +296,7 @@
                     </ul>
                 </div>
                 
+                <!-- Cultural Etiquette -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-4">📜 Cultural Etiquette</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm">
@@ -276,6 +307,7 @@
                     </ul>
                 </div>
 
+                <!-- General Advice -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-4">📋 General Advice</h3>
                     <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm">
@@ -291,6 +323,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Italy Travel Guide. All information is for planning purposes only.</p>
@@ -298,9 +331,23 @@
         </div>
     </footer>
 
+    <!-- Leaflet JS for Interactive Map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <script>
+        // Register the Service Worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
         // --- Mobile Menu Toggle ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
